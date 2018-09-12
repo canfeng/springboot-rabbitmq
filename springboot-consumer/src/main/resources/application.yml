@@ -9,6 +9,7 @@ spring:
     listener:
       simple:
         concurrency: 5
+        ## manual:手动 ack（确认）
         acknowledge-mode: manual
         max-concurrency: 10
         prefetch: 1

@@ -28,7 +28,5 @@ public interface BrokerMessageLogMapper {
     void changeBrokerMessageLogStatus(@Param("messageId")String messageId, @Param("status")String status, @Param("updateTime")Date updateTime);
 
     int insertSelective(BrokerMessageLog record);
-
-
 }
 
