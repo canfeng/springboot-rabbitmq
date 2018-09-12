@@ -75,7 +75,10 @@ service firewalld stop
 ## 消息流转流程图
 ![image](https://github.com/suxiongwei/springboot-rabbitmq/blob/master/springboot-producer/src/main/resources/static/RabbitMQ1.jpg)
 
-## RabbitMQ整合SpringBoot2.x
+## RabbitMQ整合SpringBoot2.x,消息可靠性传递方案100%的实现
+### 方案流程图
+![image](https://github.com/suxiongwei/springboot-rabbitmq/blob/master/springboot-producer/src/main/resources/static/RabbitMQ2.jpg)
+### 代码实现
 1. 引入相关依赖
 ```
 <dependency>
@@ -129,8 +132,7 @@ server:
   servlet:
     context-path: /
 ```
-## 保证100%的消息可靠性传递方案实现，参考实例代码
-[springboot-rabbitmq](https://github.com/suxiongwei/springboot-rabbitmq)
+## 完整实例代码[springboot-rabbitmq](https://github.com/suxiongwei/springboot-rabbitmq)
 
 ## 数据库文件
 ```sql
@@ -160,5 +162,10 @@ CREATE TABLE `t_order` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2018091102 DEFAULT CHARSET=utf8;
 ```
+
+## 演示步骤:
+1. run ConsumerApplication 来开启消费者服务
+2. run ProducerApplication 来开启生产者服务
+3. run SpringbootProducerApplicationTests 中的testSend方法来发送消息进行测试
 ## 代码实例及学习参考内容来自慕课网课程[RabbitMQ消息中间件极速入门与实战](https://www.imooc.com/learn/1042)
 

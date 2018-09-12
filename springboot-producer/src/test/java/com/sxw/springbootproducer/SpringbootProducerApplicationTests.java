@@ -15,7 +15,7 @@ import java.util.UUID;
 public class SpringbootProducerApplicationTests {
     @Autowired private OrderService orderService;
     @Test
-    public void testSend1() throws Exception {
+    public void testSend() throws Exception {
         Order order = new Order();
         order.setId(2018091103);
         order.setName("测试订单1");
